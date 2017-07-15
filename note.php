@@ -1,3 +1,6 @@
+<?php
+session_start();
+ ?>
 <html>
 <body>
   <?php
@@ -6,8 +9,7 @@
   $username = "root";
   $password = "";
   $dbname = "admin";
-  $id="1";
-  $bankid="2423";
+
   //  $bloodtype="O P";
   //$pass=$_POST["pwd"];
   //echo $user;
@@ -27,9 +29,13 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         //echo  $row["name"];
+
+    $_SESSION['event-name'] = $row["name"];
+
+
         ?>
-<form method="post" action="register.php">
-        <label name="ename"><?php echo $row["name"]; ?></label>
+<form id="" method="post" action="register.php">
+        <label name="ename" id="ename"><?php echo $row["name"]; ?></label>
         <br>
 
         <input type="submit" value="REGISTER">
