@@ -27,9 +27,11 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         //echo  $row["name"];
-        ?><label name="ename"><?php echo $row["name"]; ?></label>
+        ?>
+<form method="post" action="register.php">
+        <label name="ename"><?php echo $row["name"]; ?></label>
         <br>
-        <form method="post" action="register.php">
+
         <input type="submit" value="REGISTER">
       </form>
     <?php
