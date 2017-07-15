@@ -56,7 +56,7 @@ else{
    // Step 4: make an array of people we know, to send them a message.
    // Feel free to change/add your own phone number and name here.
    $people = array(
-       "+918008030261" => "Curious George",
+       "+918008030261" => "harika",
 
 
    );
