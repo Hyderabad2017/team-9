@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -8,69 +8,62 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <script language="javascript">
+    <script type="javascript">
 
-          function validate(){
-            document.alert("entered");
-            var bt=document.getElementsByName('radio').value;
-            var bu=document.getElementsByName('units').value;
-            var loc=document.getElementsByName('location').value;
+      function validate(){
+        var bt=document.getElementsByName('radio').value;
+        var bu=document.getElementsByName('units').value;
+        var loc=document.getElementsByName('location').value;
 
-            if((bt=="") || (bu=="") || (loc=="")){
-              alert("enter all the details");
-            }
-          }
-        </script>
+        if((bt=="") || (bu=="") || (loc=="")){
+          alert("enter all the details");
+        }
+      }
+    </script>
 </head>
 
 <body>
-  <form name="f1" method="post" action="check.php">
+  <form id="f1" method="post" action="check.php"
     <h1 class="text-center">Enter the requirements</h1>
     <h1>Choose the blood type</h1>
     <div class="radio">
         <label>
-            <input type="radio" name="radio">A Negative</label>
+            <input type="radio" name="radio" value="a negative">A Negative</label>
     </div>
     <div class="radio">
         <label>
-            <input type="radio" name="radio">A Positive</label>
+            <input type="radio" name="radio" value="a positive">A Positive</label>
     </div>
     <div class="radio">
         <label>
-            <input type="radio" name="radio">O Negative</label>
+            <input type="radio" name="radio" value="o negative">O Negative</label>
     </div>
     <div class="radio">
         <label>
-            <input type="radio" name="radio">O Positive</label>
+            <input type="radio" name="radio" value="o positive">O Positive</label>
     </div>
     <div class="radio">
         <label>
-            <input type="radio" name="radio">B Negative</label>
+            <input type="radio" name="radio" value="b negative">B Negative</label>
     </div>
     <div class="radio">
         <label>
-            <input type="radio" name="radio">B Positive</label>
+            <input type="radio" name="radio" value="b positive">B Positive</label>
     </div>
     <div class="radio">
         <label>
-            <input type="radio" name="radio">AB Negative</label>
+            <input type="radio" name="radio" value="ab negative">AB Negative</label>
     </div>
     <div class="radio">
         <label>
-            <input type="radio" name="radio">AB Positive</label>
+            <input type="radio" name="radio" value="ab positive">AB Positive</label>
     </div>
     <h1>Enter Units of Blood required</h1>
-
     <input type="text" name="units" >
-    <h1>Enter time frame in hours</h1>
-    <input type="text" name="time" >
     <h1>Enter Location</h1>
     <input type="text" name="location">
-    <input type="submit" value="submit" >
+    <button class="btn btn-default" type="submit" onclick="validate()">NOTIFY </button>
 </form>
-
-
-
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

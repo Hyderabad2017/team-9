@@ -1,33 +1,43 @@
-<?php
+<html>
+<body>
+  <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "admin";
-$id="1";
-$bankid="2423";
-//  $bloodtype="O P";
-//$pass=$_POST["pwd"];
-//echo $user;
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "admin";
+  $id="1";
+  $bankid="2423";
+  //  $bloodtype="O P";
+  //$pass=$_POST["pwd"];
+  //echo $user;
+  // Create connection
+  $conn = new mysqli($servername, $username, $password, $dbname);
+  // Check connection
+  if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+  }
+  else{
+    //echo "connected";
+  }
+  $sql = "SELECT * FROM events where id=1";
+  $result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        //echo  $row["name"];
+        ?><label><?php echo $row["name"]; ?></label>
+        <br>
+        <input type="submit" value="REGISTER">
+    <?php
+  }
+} else {
+    echo "0 results";
 }
-$sql = "SELECT name FROM events WHERE id=1;
-if ($result=mysqli_query($conn,$sql))
-  {
-  // Get field information for all fields
-  while ($fieldinfo=mysqli_fetch_field($result))
-    {
-    printf("Name: %s\n",$fieldinfo->name);
-
-    }
-  // Free result set
-  mysqli_free_result($result);
-}
-$conn->close();
 
 
- ?>
+  $conn->close();
+  ?>
+</body>
+</html>
