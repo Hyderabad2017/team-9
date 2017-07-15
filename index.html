@@ -10,45 +10,48 @@
 </head>
 
 <body>
+  <form id="f1" method="post" action="check.php"
     <h1 class="text-center">Enter the requirements</h1>
     <h1>Choose the blood type</h1>
     <div class="radio">
         <label>
-            <input type="radio">A Negative</label>
+            <input type="radio" name="radio" value="a negative">A Negative</label>
     </div>
     <div class="radio">
         <label>
-            <input type="radio">A Positive</label>
+            <input type="radio" name="radio" value="a positive">A Positive</label>
     </div>
     <div class="radio">
         <label>
-            <input type="radio">O Negative</label>
+            <input type="radio" name="radio" value="o negative">O Negative</label>
     </div>
     <div class="radio">
         <label>
-            <input type="radio">O Positive</label>
+            <input type="radio" name="radio" value="o positive">O Positive</label>
     </div>
     <div class="radio">
         <label>
-            <input type="radio">B Negative</label>
+            <input type="radio" name="radio" value="b negative">B Negative</label>
     </div>
     <div class="radio">
         <label>
-            <input type="radio">B Positive</label>
+            <input type="radio" name="radio" value="b positive">B Positive</label>
     </div>
     <div class="radio">
         <label>
-            <input type="radio">AB Negative</label>
+            <input type="radio" name="radio" value="ab negative">AB Negative</label>
     </div>
     <div class="radio">
         <label>
-            <input type="radio">AB Positive</label>
+            <input type="radio" name="radio" value="ab positive">AB Positive</label>
     </div>
     <h1>Enter Units of Blood required</h1>
-    <input type="text">
+    <input type="text" name="units" >
     <h1>Enter Location</h1>
-    <input type="text">
+    <input type="text" name="location">
     <button class="btn btn-default" type="submit">NOTIFY </button>
+</form>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
