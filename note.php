@@ -29,7 +29,9 @@ if ($result->num_rows > 0) {
         //echo  $row["name"];
         ?><label><?php echo $row["name"]; ?></label>
         <br>
+        <form method="post" action="register.php">
         <input type="submit" value="REGISTER">
+      </form>
     <?php
   }
 } else {
