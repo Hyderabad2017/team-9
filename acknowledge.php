@@ -1,13 +1,4 @@
-<html>
-<body>
 
-  <h1>Enter donor details</h1>
-<h1>Enter donor name</h1>
-  <input type="text" name="name" >
-  <h1>Enter units of blood donated</h1>
-  <input type="text" name="units" >
-
-  <input type="submit" value="submit" >
 <?php
 
 $selected_name =$_POST['name'];
@@ -89,6 +80,4 @@ $conn->close();
 
 
 ?>
- </body>
-
- </html>
+ 
