@@ -1,4 +1,6 @@
-<?php
+<html>
+<body>
+  <?php
 
 $servername = "localhost";
 $username = "root";
@@ -21,7 +23,7 @@ if ($result=mysqli_query($conn,$sql))
   // Get field information for all fields
   while ($fieldinfo=mysqli_fetch_field($result))
     {
-    printf("Name: %s\n",$fieldinfo->name);
+    $labelvalue=$fieldinfo->name;
 
     }
   // Free result set
@@ -29,5 +31,8 @@ if ($result=mysqli_query($conn,$sql))
 }
 $conn->close();
 
+?>
 
- ?>
+<label  class="event"><?php echo $labelvalue; ?></label>
+</body>
+</html>
