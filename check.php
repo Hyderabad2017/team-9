@@ -43,6 +43,7 @@ else{
    // Feel free to change/add your own phone number and name here.
    $people = array(
        "+918008030261" => "harika",
+
    );
    // Step 5: Loop over all our friends. $number is a phone number above, and
    // $name is the name next to it
