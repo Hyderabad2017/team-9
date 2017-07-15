@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 15, 2017 at 05:38 PM
+-- Generation Time: Jul 15, 2017 at 08:04 PM
 -- Server version: 5.6.35
 -- PHP Version: 7.0.15
 
@@ -13,6 +13,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `bloodbank`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin_login`
+--
+
+CREATE TABLE `admin_login` (
+  `id` int(11) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `admin_login`
+--
+
+INSERT INTO `admin_login` (`id`, `email`, `password`) VALUES
+(1, 'nishu0505@gmail.com', 'nishu0505');
 
 -- --------------------------------------------------------
 
@@ -52,7 +71,9 @@ CREATE TABLE `donor_login` (
 INSERT INTO `donor_login` (`donor_id`, `donor_name`, `email`, `password`, `contact`, `city`, `address`, `bloodgroup`) VALUES
 (1, 'Manasa Susarla', 'manu.susarla@gmail.com', '754796fdf3071f8aa6ce693cc75945cd', '7416791415', 'Hyderabad', 'Gachibowli', 'A'),
 (2, 'Sri kaavya', 'srikaavya.toodi@gmail.com', 'a1b4902650c317c7921f3594f52e326e', '7331120374', 'hyderabad', 'srinagar colony', 'O+'),
-(3, 'Manasa Susarla', '', '87aa6f0e31737011537be8a7801c3437', '7416791415', 'Hyderabad', 'Gachibowli, Telecomnagar', 'A');
+(3, 'Manasa Susarla', '', '87aa6f0e31737011537be8a7801c3437', '7416791415', 'Hyderabad', 'Gachibowli, Telecomnagar', 'A'),
+(4, 'Lion ', 'lion@gmail.com', 'c1c7678ea7730848325ecf86944ecde3', '8000000000', 'Hyderabad', 'Gachibowli, Telecomnagar', 'A'),
+(5, 'Lion ', 'aaaa@a.com', 'c1c7678ea7730848325ecf86944ecde3', '8000000000', 'Hyderabad', 'Gachibowli, Telecomnagar', 'A');
 
 -- --------------------------------------------------------
 
@@ -90,4 +111,4 @@ ALTER TABLE `donor_login`
 -- AUTO_INCREMENT for table `donor_login`
 --
 ALTER TABLE `donor_login`
-  MODIFY `donor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `donor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
