@@ -26,13 +26,18 @@ if ($result=mysqli_query($conn,$sql))
     $labelvalue=$fieldinfo->name;
 
     }
+  }
+  ?>
   // Free result set
-  mysqli_free_result($result);
-}
+
+
+<label  class="event"><?php echo $labelvalue; ?></label>
+<?php
+
+mysqli_free_result($result);
+
 $conn->close();
 
 ?>
-
-<label  class="event"><?php echo $labelvalue; ?></label>
 </body>
 </html>
