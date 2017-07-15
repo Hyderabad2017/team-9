@@ -1,0 +1,28 @@
+panel_setting{
+	margin-top: 10px;
+	
+}
+.container{
+	background-color: #dcdcdc;
+	border-radius: 5px;
+
+}
+.panel-body{
+	background-color: #f5f5f5;
+	border:none;
+}
+.panel_heading_height{
+	height: 50px;
+}
+.glyphicon.glyphicon-user {
+    font-size: 25px;
+}
+#profile_label{
+	font-size: 20px;
+}
+.shared_post{
+	height: 420px;
+}
+.store_intro{
+	height: 362px;
+}
