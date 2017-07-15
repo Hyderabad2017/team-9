@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+.form-actions {
+    margin: 0;
+    
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+ <form name="frm1" action="action.php" method="post">
+<div class="container">
+  
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">Is your age between 18-60 years?</div>
+      <div class="panel-body">
+      <label class="radio-inline">
+      <input type="radio" name="optradio">YES
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio">NO
+    </label></div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">Is your weight 45 kgs OR more?</div>
+      <div class="panel-body"> 
+      <label class="radio-inline">
+      <input type="radio" name="optradio1">YES
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio1">NO
+    </label></div>
+    </div>
+
+    <div class="panel panel-success">
+      <div class="panel-heading">Was your last blood donation 3 or more months earlier?</div>
+      <div class="panel-body">
+      <label class="radio-inline">
+      <input type="radio" name="optradio2">YES
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio2">NO
+    </label></div>
+    </div>
+
+    <div class="panel panel-info">
+      <div class="panel-heading">You have not suffered from diseases in the recent past(Malaria,Typhoid or other transmittable diseases)</div>
+      <div class="panel-body">
+      <label class="radio-inline">
+      <input type="radio" name="optradio3">YES
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio3">NO
+    </label></div>
+    </div>
+
+    <div class="panel panel-warning">
+      <div class="panel-heading">Had NO fainiting attacks during last donation?</div>
+      <div class="panel-body">
+      <label class="radio-inline">
+      <input type="radio" name="optradio4">YES
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio4">NO
+    </label></div>
+    </div>
+
+    <div class="panel panel-danger">
+      <div class="panel-heading">Had NO major surgery in the last 6 months?</div>
+      <div class="panel-body">
+      <label class="radio-inline">
+      <input type="radio" name="optradio5">YES
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio5">NO
+    </label></div>
+    </div>
+	<div class="form-actions">
+    <button type="submit" class="btn" style="background-color:#ff8a80 ">DONATE BLOOD</button>
+</div>
+
+  </div>
+</div>
+</form>
+
+</body>
+</html>
