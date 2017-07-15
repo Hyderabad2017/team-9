@@ -1,7 +1,10 @@
 <?php
 
+session_start();
+
 $id="1";
-$event_name=$_POST['ename'];
+//echo $_SESSION['event-name'];
+$event_name= $_SESSION['event-name'];
 $user="xyz";
 
 $servername = "localhost";
