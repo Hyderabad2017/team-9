@@ -14,7 +14,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql = "INSERT INTO regevent VALUES ($id,$event_name,$user);";
+$sql = "INSERT INTO regevent VALUES ($id,'$event_name','$user');";
 if ($conn->query($sql) === TRUE) {
     echo "registered successfully";
 } else {
