@@ -1,23 +1,26 @@
 <html>
 <body>
 
-  <
+  <h1>Enter donor details</h1>
+<h1>Enter donor name</h1>
+  <input type="text" name="name" >
+  <h1>Enter units of blood donated</h1>
+  <input type="text" name="units" >
+
+  <input type="submit" value="submit" >
 <?php
+
+$selected_name =$_POST['name'];
+//echo "you have selected :".$selected_type;
+$selected_units =$_POST['units'];
 
 require_once "vendor/autoload.php";
 use Twilio\Rest\Client;
 
-if((empty($_POST['radio'])) || (empty($_POST['units'])) || (empty($_POST['time'])) || (empty($_POST['location']))){
-echo "enter all the credentials";
-}
-else{
-$selected_bloodtype=$_POST['radio'];
-//echo "you have selected :".$selected_type;
-$selected_bloodunits=$_POST['units'];
-$selected_time=$_POST['time'];
-$selected_location=$_POST['location'];
 
-$servername = "localhost";
+
+
+/*$servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "bloodbank";
@@ -45,7 +48,7 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
-
+*/
 
  // Step 2: set our AccountSid and AuthToken from https://twilio.com/console
  $AccountSid = "ACd74e2681571e8a95cae78c09ea35fd1a";
@@ -76,16 +79,16 @@ $conn->close();
              // that you've purchased
              'from' => "+13603017784",
 
-             'body' => "Hey we need you to kindly donate the blood at  ".$selected_location."   blood bank"
+             'body' => "Hey  ".$selected_name."  Thank you for the donation. Hope you keep helping the needy.  "
          )
      );
 
      // Display a confirmation message on the screen
-     echo "Sent message to $name";
+     echo "Sent message to $selected_name";
  }
 
-}
+
 ?>
- ?>
+ </body>
 
  </html>
