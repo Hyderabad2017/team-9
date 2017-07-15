@@ -43,6 +43,9 @@ require("includes/connect.php");
                             <div class="form-group">
                                 <input type="password" class="form-control" placeholder="Password" pattern=".{6,}" name="password" required = "true">
                             </div>
+							<div class="form-group">
+                                <input type="password" class="form-control" placeholder="Password" pattern=".{6,}" name="re-enter_password" required = "true">
+                            </div>
                             <div class="form-group">
                                 <input type="text" class="form-control"  placeholder="Contact" maxlength="10" size="10" name="contact" required = "true"><?php echo $_GET['m2']; ?>
                             </div>
@@ -53,8 +56,19 @@ require("includes/connect.php");
                                 <input  type="text" class="form-control"  placeholder="Address" name="address" required = "true">
                             </div>
                             <div class="form-group">
-                                <input  type="text" class="form-control"  placeholder="BloodGroup" name="group" required = "true">
-                            </div>
+                                 Blood group
+								<select class="selectpicker">
+									 <option value="Select">Select</option>
+									 <option value="O+">O+</option>
+									 <option value="O-">O-</option>
+									 <option value="A+">A+</option>
+						  	     	 <option value="B+">B+</option>
+									 <option value="A-">A-</option>
+						  			 <option value="B-">B-</option>
+						             <option value="AB-">AB-</option>
+									 <option value="AB+">AB+</option>
+							    </select> 
+							</div>
                             <button type="submit" name="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
