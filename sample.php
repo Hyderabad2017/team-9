@@ -28,7 +28,7 @@
     // Feel free to change/add your own phone number and name here.
     $people = array(
         "+918008030261" => "Curious George",
-		"+917659815633" => "lakshmi",
+		
        
     );
 
