@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php include 'includes/connect.php' ?><!DOCTYPE html>
 <html>
 
 <head>

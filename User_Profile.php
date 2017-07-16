@@ -1,100 +1,138 @@
+<?php include 'includes/connect.php' ?>
+<?php
+
+if(isset($_POST['sub'])){
+	//$error_msg = array();
+        $q0=$_POST['optradio'];
+        $q1=$_POST['optradio1'];
+        $q2=$_POST['optradio2'];
+        $q3=$_POST['optradio3'];
+        $q4=$_POST['optradio4'];
+        $q5=$_POST['optradio5'];
+     
+           
+	if(($q0=="no")||($q1=="no")||($q2=="no")||($q3=="no")||($q4=="no")||($q5=="no")){
+		 echo "<h2><center>You are not eligible to donate blood.</center></h2>";
+	}
+	
+	else if(($q0=="yes")&&($q1=="yes")&&($q2=="yes")&&($q3=="yes")&&($q4=="yes")&&($q5=="yes")){
+           echo "<script> location.href='displayEvents.php'; </script>";
+           
+            
+        }
+	
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Donor Profile | BloodBank</title>
-         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <script src="js/jquery.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="css/modal.css" rel="stylesheet" type="text/css"  media="all" />
-        <!-- Custom CSS -->
-       
-        <!-- jQuery -->
-        <script src="js/jquery.js"></script>
-     
-        <script src="js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <html>
-	<head>
-	<title>log in</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- this is a must for bootstrap- -reponsivenes??yup mobile lokuda correct ga ravataniki.ok-->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<style>
-	#t{
-	 background:#d50000 ;
-	 color:black;
-	} 
-	#t1{
-	 background-color:#f44336;
-	 color:black;
-	} 
-	
-	#t2{
-	 background:#ef5350;
-	 color:black;
-	} 
-	#t3{
-	 background:#e57373;
-	 color:black;
-	} 
-	#r{
-	background-color:#ffffff;
-	}
-	</style>
-	
-
-	</head>
-	<body>
-	<div class="container">
-	<div class="jumbotron" id="r">
-  <h2>DONOR INFO</h2>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
-  <form id="t">
-  <div class="form-group" id="t1">
-	<p>Are you weighing 45?</p>
-    <label class="radio-inline">
-      <input type="radio" name="optradio">YES
+  <style>
+.form-actions {
+    margin: 0;
+    
+    text-align: center;
+}
+
+</style>
+</head>
+
+<body>
+    <?php include 'includes/header1.php'; ?>
+ <form action="User_profile.php" method="post">
+     <br>
+     <br>
+     <br>
+     <br>
+<div class="container">
+    
+    <h1><center>Enter Donor Information</center></h1>
+  
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">Is your age between 18-60 years?</div>
+      <div class="panel-body">
+      <label class="radio-inline">
+      <input type="radio" name="optradio" value="yes">YES
     </label>
     <label class="radio-inline">
-      <input type="radio" name="optradio">NO
-    </label>
-	</div>
-	
-	<div class="form-group" id="t2">
-	<p>Are you above 18?</p>
-    <label class="radio-inline">
-      <input type="radio" name="optradio1">YES
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio1">NO
-    </label>
-	</div>
-	
-	<div class="form-group" id="t3">
-	<p>Do you have any health issues?</p>
-    <label class="radio-inline">
-      <input type="radio" name="optradio2">YES
+      <input type="radio" name="optradio" value="no">NO
+    </label></div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">Is your weight 45 kgs OR more?</div>
+      <div class="panel-body"> 
+      <label class="radio-inline">
+      <input type="radio" name="optradio1" value="yes">YES
     </label>
     <label class="radio-inline">
-      <input type="radio" name="optradio2">NO
+      <input type="radio" name="optradio1" value="no">NO
+    </label></div>
+    </div>
+
+    <div class="panel panel-success">
+      <div class="panel-heading">Was your last blood donation 3 or more months earlier?</div>
+      <div class="panel-body">
+      <label class="radio-inline">
+      <input type="radio" name="optradio2" value="yes">YES
     </label>
-	</div>
-      <button type="submit" name="submit" class="btn btn-primary">Donate Blood</button>
-  </form>
+    <label class="radio-inline">
+      <input type="radio" name="optradio2" value="no">NO
+    </label></div>
+    </div>
+
+    <div class="panel panel-info">
+      <div class="panel-heading">You have not suffered from diseases in the recent past(Malaria,Typhoid or other transmittable diseases)</div>
+      <div class="panel-body">
+      <label class="radio-inline">
+      <input type="radio" name="optradio3" value="yes">YES
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio3" value="no">NO
+    </label></div>
+    </div>
+
+    <div class="panel panel-warning">
+      <div class="panel-heading">Had NO fainting attacks during last donation?</div>
+      <div class="panel-body">
+      <label class="radio-inline">
+      <input type="radio" name="optradio4" value="yes">YES
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio4" value="no">NO
+    </label></div>
+    </div>
+
+    <div class="panel panel-danger">
+      <div class="panel-heading">Had NO major surgery in the last 6 months?</div>
+      <div class="panel-body">
+      <label class="radio-inline">
+      <input type="radio" name="optradio5" value="yes">YES
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="optradio5" value="no">NO
+    </label></div>
+    </div>
+	<div class="form-actions">
+    <input type="submit" name="sub" id="sub" class="btn" value="Donate Blood">
 </div>
+
+  </div>
 </div>
-	
-	
-	</body>
-	
+</form>
+    <div class="container container-fluid">
+        <div class="well">
+            <center> <a href="note.php" > <button type="submit" class="btn btn-lg btn-info" name="view" id="view" class="btn" > View Events</button></a></center>
+</div>
+    </div>
+     <?php include 'includes/footer.php'; ?>
+
+</body>
 </html>
-       

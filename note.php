@@ -4,12 +4,10 @@ session_start();
 <html>
 <body>
   <?php
-
   $servername = "localhost";
   $username = "root";
-  $password = "";
-  $dbname = "admin";
-
+  $password = "root";
+  $dbname = "bloodbank";
   //  $bloodtype="O P";
   //$pass=$_POST["pwd"];
   //echo $user;
@@ -24,15 +22,11 @@ session_start();
   }
   $sql = "SELECT * FROM events where id=1";
   $result = $conn->query($sql);
-
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         //echo  $row["name"];
-
     $_SESSION['event-name'] = $row["name"];
-
-
         ?>
 <form id="" method="post" action="register.php">
         <label name="ename" id="ename"><?php echo $row["name"]; ?></label>
@@ -45,8 +39,6 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
-
-
   $conn->close();
   ?>
 </body>
