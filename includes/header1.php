@@ -1,3 +1,5 @@
+
+
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -11,7 +13,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                    <li><a href = "seller_profile.php"><span class = "glyphicon glyphicon-user"></span> Profile</a></li>
+                    <li><a href = "User_profile.php"><span class = "glyphicon glyphicon-user"></span> Profile</a></li>
                     <li><a href = "logout.php"><span class = "glyphicon glyphicon-log-out"></span> Logout</a></li>
             </ul>
         </div>

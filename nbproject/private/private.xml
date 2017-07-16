@@ -3,9 +3,27 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/Applications/MAMP/htdocs/BloodBank/register_bloodbank_script.php</file>
+            <file>file:/Applications/MAMP/htdocs/BloodBank/addbank_script.php</file>
+            <file>file:/Applications/MAMP/htdocs/BloodBank/login_submit.php</file>
+            <file>file:/Applications/MAMP/htdocs/BloodBank/check.php</file>
+            <file>file:/Applications/MAMP/htdocs/BloodBank/note.php</file>
+            <file>file:/Applications/MAMP/htdocs/BloodBank/acknowledge1.php</file>
+            <file>file:/Applications/MAMP/htdocs/BloodBank/admin_profile.php</file>
+            <file>file:/Applications/MAMP/htdocs/BloodBank/includes/header1.php</file>
+            <file>file:/Applications/MAMP/htdocs/BloodBank/register.php</file>
+            <file>file:/Applications/MAMP/htdocs/BloodBank/composer.json</file>
             <file>file:/Applications/MAMP/htdocs/BloodBank/signup.php</file>
             <file>file:/Applications/MAMP/htdocs/BloodBank/signup_script.php</file>
             <file>file:/Applications/MAMP/htdocs/BloodBank/includes/connect.php</file>
+            <file>file:/Applications/MAMP/htdocs/BloodBank/css/bootstrap.min.css</file>
+            <file>file:/Applications/MAMP/htdocs/BloodBank/User_Profile.php</file>
+            <file>file:/Applications/MAMP/htdocs/BloodBank/acknowledge.php</file>
+            <file>file:/Applications/MAMP/htdocs/BloodBank/logout.php</file>
+            <file>file:/Applications/MAMP/htdocs/BloodBank/includes/header.php</file>
+            <file>file:/Applications/MAMP/htdocs/BloodBank/bloodbank_profile.php</file>
+            <file>file:/Applications/MAMP/htdocs/BloodBank/includes/footer.php</file>
+            <file>file:/Applications/MAMP/htdocs/BloodBank/index.php</file>
         </group>
     </open-files>
 </project-private>

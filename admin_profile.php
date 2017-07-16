@@ -116,7 +116,7 @@ require("includes/connect.php");
 
         </div>
         <div id="container container-fluid">
-            <a href="invetory.php"> <center><button type="submit" btn="btn btn-lg btn-info" name="REGISTER BLOOD BANK" class="btn btn-primary">Show Inventory</button></center></a>
+            <a href="adminportal.php"> <center><button type="submit" btn="btn btn-lg btn-info" name="REGISTER BLOOD BANK" class="btn btn-primary">Show Inventory</button></center></a>
         </div>
        
 

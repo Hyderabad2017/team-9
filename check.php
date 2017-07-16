@@ -16,7 +16,7 @@ else{
   $username = "root";
   $password = "root";
   $dbname = "bloodbank";
-  $id="1";
+  //$id="1";
   $bankid="2423";
 //  $bloodtype="O P";
   //$pass=$_POST["pwd"];
@@ -27,7 +27,7 @@ else{
   if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
   }
-  $sql = "INSERT INTO bloodrequests VALUES ($id,$bankid,'$selected_bloodtype', $selected_bloodunits, $selected_time);";
+  $sql = "INSERT INTO bloodrequests VALUES ('',$bankid,'$selected_bloodtype', $selected_bloodunits, $selected_time);";
   if ($conn->query($sql) === TRUE) {
       //echo "New record created successfully";
   } else {
@@ -58,7 +58,7 @@ else{
            )
        );
        // Display a confirmation message on the screen
-       //echo "Sent message to $name";
+       echo "<h2><p>Sent message to $name</p></h2>";
    }
 }
  ?>

@@ -51,6 +51,6 @@ $conn->close();
          )
      );
      // Display a confirmation message on the screen
-     //echo "Sent message to $selected_name";
+     echo "<center><h3>Successfully Sent message to $selected_name</h3></center>";
  }
 ?>

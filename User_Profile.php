@@ -16,7 +16,7 @@ if(isset($_POST['sub'])){
 	}
 	
 	else if(($q0=="yes")&&($q1=="yes")&&($q2=="yes")&&($q3=="yes")&&($q4=="yes")&&($q5=="yes")){
-           echo "<script> location.href='displayEvents.php'; </script>";
+           echo "<script> location.href='note.php'; </script>";
            
             
         }
