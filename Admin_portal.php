@@ -58,24 +58,22 @@ require("includes/connect.php");
 								</thead>
 								<tbody>
 								   <?php
-									 include("DBconfig.php");
-									 
-									 $result = mysql_query("SELECT * FROM Bank_Inventory");
-									 
-									 while($test = mysql_fetch_array($result))
+									 $hostname = "localhost";
+									 $username = "root";
+									 $password = "Sri@1204";
+									 $dbname = "test";
+									 $conn = mysql_connect($hostname, $username, $password);
+									 if (!$conn)
 									 {
-										 $id = $test['id']; 
-										 echo"<tr><td>O+</td><td>".$test['O+']."</td></tr>";
-										 echo"<tr><td>O-</td><td>".$test['O-']."</td></tr>";
-										 echo"<tr><td>A+</td><td>".$test['A+']."</td></tr>";
-										 echo"<tr><td>A-</td><td>".$test['A-']."</td></tr>";
-										 echo"<tr><td>B+</td><td>".$test['B+']."</td></tr>";
-										 echo"<tr><td>B-</td><td>".$test['B-']."</td></tr>";
-										 echo"<tr><td>AB+</td><td>".$test['AB+']."</td></tr>";
-										 echo"<tr><td>AB-</td><td>".$test['AB-']."</td></tr>";
+									   die('Could not connect: ' . mysql_error());
 									 }
+									 mysql_select_db($dbname, $conn);
+									 do{
+									     $test = mysql_query("SELECT * FROM bank_inventory where id = $num");
+										 echo"<tr><td>".$test['BloodGroup']"</td><td>".$test['units']."</td></tr>";
+									 }while($test);
 									 mysql_close($conn);
-									 ?>
+									?>
 								</tbody> 
 							  </table>
 						</div>
