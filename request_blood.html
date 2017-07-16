@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bloodbankrequest</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+
+    <script language="javascript">
+          function validate(){
+            document.alert("entered");
+            var bt=document.getElementsByName('radio').value;
+            var bu=document.getElementsByName('units').value;
+            var loc=document.getElementsByName('location').value;
+            if((bt=="") || (bu=="") || (loc=="")){
+              alert("enter all the details");
+            }
+          }
+        </script>
+	
+</head>
+
+<body>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/css/bootstrap-select.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
+
+<style type="text/css">
+#bootstrapSelectForm .selectContainer .form-control-feedback {
+    /* Adjust feedback icon position */
+    right: -15px;
+}
+</style>
+
+<form id="bootstrapSelectForm" method="post" class="form-horizontal">
+<h1 class="text-center">Enter the requirements</h1>
+    
+
+    <div class="form-group">
+        <label class="col-xs-3 control-label">Choose your blood type</label>
+        <div class="col-xs-5 selectContainer">
+            <select name="language" class="form-control">
+                <option value=""></option>
+                <option value="arabic">A +</option>
+                <option value="english">A -</option>
+                <option value="french">B +</option>
+                <option value="german">B -</option>
+                <option value="other">O +</option>
+				<option value="other">O -</option>
+				<option value="other">AB +</option>
+				<option value="other">AB -</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-xs-5 col-xs-offset-3">
+	<h3>Enter Units of Blood required</h3>
+
+    <input type="text" name="units" >
+	
+    <h3>Enter time frame in hours</h3>
+    <input type="text" name="time" >
+    <h3>Enter Location</h3>
+    <input type="text" name="location">
+	</div>
+    <br>
+	<button type="button" class="btn btn-danger">SUBMIT</button>
+</form>
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
